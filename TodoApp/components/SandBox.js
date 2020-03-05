@@ -14,6 +14,9 @@ const SandBox = () => {
 
 const styles = StyleSheet.create({
   container: {
+    // flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-around',
     paddingTop: 40,
     backgroundColor: '#ddd',
   },
@@ -31,8 +34,7 @@ const styles = StyleSheet.create({
   },
   boxFour: {
     padding: 10,
-    backgroundColor:
-      'skyblue                                                                                                                                     ',
+    backgroundColor: 'skyblue',
   },
 });
 

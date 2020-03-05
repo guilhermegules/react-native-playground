@@ -1,10 +1,14 @@
 import React from 'react';
-import {StyleSheet, Text, TouchableOpacity} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
+import Feather from 'react-native-vector-icons/Feather';
 
 const TodoItem = ({item, pressHandler}) => {
   return (
     <TouchableOpacity onPress={() => pressHandler(item.key)}>
-      <Text style={styles.item}>{item.text}</Text>
+      <View style={styles.item}>
+        <Feather name="trash-2" size={15} color="#333" />
+        <Text style={styles.itemText}>{item.text}</Text>
+      </View>
     </TouchableOpacity>
   );
 };
@@ -17,6 +21,10 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderStyle: 'dashed',
     borderRadius: 10,
+    flexDirection: 'row',
+  },
+  itemText: {
+    marginLeft: 10,
   },
 });
 
